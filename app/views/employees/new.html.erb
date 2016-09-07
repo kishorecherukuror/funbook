@@ -1,0 +1,17 @@
+<%= form_for @employee, url: {action: "create"} do |f| %>
+
+<% if @employee.errors.any? %>
+	<% @employee.errors.full_messages.each do |msg| %>
+		<%= msg %><br />
+	<% end %>
+<% end %>
+
+
+<p>Name: <%= f.text_field :name %> </p>
+<p>Age: <%= f.number_field :age %></p>
+<p>Saraly: <%= f.number_field :salary %></p>
+<p>gender: <%= f.radio_button :gender, 'male' %> Male <%= f.radio_button :gender, 'female' %> FeMale </p>
+<p>Email: <%= f.text_field :email %></p>
+<p>Phone: <%= f.text_field :phone %></p>
+<p><%= f.submit %></p>
+<% end %>

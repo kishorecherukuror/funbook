@@ -1,0 +1,8 @@
+<h1>Employees#edit</h1>
+<%=form_for @employee, url: update_path(@employee) do |f| %>
+<p>Name: <%= f.text_field :name %> </p>
+<p>Age: <%= f.number_field :age %></p>
+<p>Saraly: <%= f.number_field :salary %></p>
+<p>gender: <%= f.radio_button :gender, 'male' %> Male <%= f.radio_button :gender, 'female' %> FeMale </p>
+<p><%= f.submit %></p>
+<% end %>

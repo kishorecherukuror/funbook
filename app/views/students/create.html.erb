@@ -1,0 +1,7 @@
+<%= form_tag students_show_path do %>
+<p>Name: <%= text_field_tag 'name' %></p>
+<p>Age: <%= text_field_tag 'age' %></p>
+<p> Gender: <%= radio_button_tag 'gender', 'male' %> Male  <%= radio_button_tag 'gender', 'female' %> FeMale</p>
+<p> Address: <%= text_area_tag 'address' %></p>
+<%= submit_tag %>
+<% end %>

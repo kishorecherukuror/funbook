@@ -1,0 +1,4 @@
+<% @categories.each do |c| %>
+<p>Name : <%= c.name %><%= link_to "Add Product", new_product_path(c) %>
+</p>
+<% end %>

@@ -1,0 +1,13 @@
+<%= form_for @product , url: {action: "create"} do |f| %>
+
+<p>Name : <%= f.text_field :name %></p>
+<p>Price : <%= f.text_field :price %></p>
+<p>Quantity: <%= f.text_field :quantity %></p>
+
+<p><%= select_tag "category", options_from_collection_for_select(Category.all, "id", "name") %>
+</p>
+
+<p><%= f.submit %></p>
+
+
+<% end %>

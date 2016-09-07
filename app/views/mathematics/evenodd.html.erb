@@ -1,0 +1,16 @@
+<h1>Find Even or Odd</h1>
+
+<%= form_tag do %>
+	<%= label_tag "Enter Number" %>
+	<%= text_field_tag 'number' %>
+	<%= submit_tag "EvenOdd" %>
+<% end %>
+	
+<% if @number != 0 %>
+<% if @number % 2 == 0  %>
+	Result: Even Number
+<% else %>
+	Result: Odd Number
+
+<%end %>
+<% end %>

@@ -1,0 +1,26 @@
+
+<table border="10px" style="width:100%">
+	<tr>
+		<th>Name</th>
+		<th>Age</th>
+		<th>Salary</th>
+		<th>Gender</th>
+		<th>Email</th>
+		<th>Phone</th>
+		<th>Action</th>
+	</tr>
+
+<% @employees.each do |emp| %>
+<tr>
+<td><%= emp.name %></td>
+<td><%= emp.age %></td>
+<td><%= emp.salary %></td>
+<td><%= emp.gender %></td>
+<td><%= emp.email %></td>
+<td><%= emp.phone %></td>
+<td><%= link_to "show" ,mobin_path(emp) %> |
+	<%= link_to "edit" ,edit_path(emp) %> |
+	<%= link_to "delete" ,delete_path(emp), method: "delete" , data: {confirm: "Are you sure"}%></td>
+<% end %>
+
+</table>
