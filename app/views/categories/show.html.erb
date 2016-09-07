@@ -1,0 +1,7 @@
+<h1> <%= @category.name %> Products</h1>
+
+<% @products.each do |p| %>
+	<p>Name : <%= p.name %></p>
+	<p>Price : <%= p.price %></p>
+	<p>Quantity : <%= p.quantity %></p>
+<% end %>

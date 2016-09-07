@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get 'categories/create'
   post 'categories/create'
   get 'categories/index'
+  get 'categories/:id', to: "categories#show", as: 'categories'
 
   resources :registrations
   resources :books
